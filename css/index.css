@@ -1,15 +1,14 @@
 /*Generals*/
 
-html, body {
+html,
+body {
     background-color: rgb(27, 27, 27);
     color: white;
     font-family: Verdana, sans-serif;
-    display: flex;
     flex-direction: column;
     align-items: center;
     margin: 0;
     padding: 0;
-    min-height: 100vh;
 }
 
 /*Header*/
@@ -18,7 +17,6 @@ header {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 10px;
     padding-top: 20px;
     padding-bottom: 20px;
     width: 100%;
@@ -58,53 +56,84 @@ a:hover {
     color: red;
 }
 
-/* Actores */
+/*Generales*/
 
-/* Actores */
+.Titulos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 50px 0px;
+}
+
+/*Peliculas*/
+#Peliculas {
+    display: flex;
+    justify-content: center;
+    padding: 20px 0;
+}
+
+#Peliculas article {
+    min-width: 120px;
+    margin: 0 25px;
+}
+
+#Peliculas img {
+    border-radius: 30px;
+    height: 300px;
+    width: 200px;
+    box-shadow: 8px 8px 8px 0px red;
+}
+
+#Peliculas img:hover {
+    transform: translateY(-5px);
+}
+
+#Peliculas h3 {
+    margin: 10px 0 5px;
+    font-size: 1rem;
+    color: white;
+    font-weight: bold;
+    text-align: left;
+}
+
+#Peliculas p {
+    margin: 0;
+    font-size: 0.9rem;
+    display: flex;
+}
+
+
 /* Actores */
 #Actores {
     display: flex;
     justify-content: center;
     gap: 25px;
     padding: 20px 0;
-    flex-wrap: wrap;
-    overflow-x: auto;
 }
 
 #Actores article {
-    text-align: center;
-    color: white;
     min-width: 120px;
+    margin: 0 25px;
 }
 
 #Actores img {
-    width: 100px;
-    height: 100px;
+    width: 125px;
+    height: 125px;
     border-radius: 50%;
-    border: 3px solid #333;
 }
 
 #Actores h3 {
     margin: 10px 0 5px;
     font-size: 1rem;
-    color: white;
     font-weight: bold;
+    text-align: left;
 }
 
 #Actores p {
     margin: 0;
     font-size: 0.9rem;
     display: flex;
-    align-items: center;
-    justify-content: center;
 }
-
-#Actores p::after {
-    color: #ffda00;
-    margin-left: 4px;
-}
-
-
 
 /* Date de alta */
 .containerform {
@@ -115,7 +144,12 @@ a:hover {
     border-radius: 15px;
     padding: 25px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    margin: 30px 0;
+    margin: 30px auto;
+    margin-top: 75px;
+}
+
+::-webkit-scrollbar {
+    display: none;
 }
 
 .form-group {
@@ -171,54 +205,22 @@ button[type="submit"]:active {
 /*Footer*/
 footer {
     background-color: #ff0000;
-    color: #fff;
-    text-align: center;
     padding: 20px;
-    width: 100vw;  /* Asegura que ocupe toda la pantalla */
+    width: 100vw;
     position: relative;
-    left: 0;
-    margin-top: 0; /* Elimina el margen superior si había */
+    text-align: center;
+    margin-top: 125px;
 }
 
-footer .footer-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 8px;
+footer img {
+    width: 50px;
+    height: 50px;
 }
 
-footer .footer-icons {
-    display: flex;
-    gap: 10px;
-}
-
-footer .footer-icons a img {
-    width: 40px;
-    height: 40px;
-    transition: transform 0.3s;
-}
-
-footer .footer-icons a img:hover {
+footer img:hover {
     transform: translateY(-3px);
 }
 
-footer p, footer address {
-    margin: 0;
-}
-
-footer p {
-    margin-top: 5px;
-    font-size: 0.85rem;
-}
-
-/* Responsive adjustments */
-@media (min-width: 768px) {
-    footer {
-        justify-content: space-around;
-        padding: 30px 50px;
-    }
-
-    footer .footer-content {
-        align-items: flex-start;
-    }
+footer address {
+    margin-top: 10px;
 }
