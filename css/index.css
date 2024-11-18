@@ -22,7 +22,6 @@ main {
 }
 
 /*Header*/
-
 .cabezera {
     display: flex;
     flex-direction: column;
@@ -322,15 +321,91 @@ button[type="submit"]:active {
     background-color: #cc0000;
 }
 
+/* Pagina detalles */
+#trailer {
+    margin-left: 5%;
+    margin-top: 50px;
+    float: inline-start;  
+}
+
+#trailer h1{
+    font-size: 25px;   
+}
+
+#trailer iframe{
+    width: 850px; 
+    height: 450px;
+}
+
+#sinopsis {
+    margin-left: 5%;
+    margin-top: 25px;
+    width: 850px;
+    text-align: justify;
+    float: inline-start;
+    font-size: 17px;
+}
+
+#ficha {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 50px;
+    justify-content: center;
+    align-items: center;
+    width: 450px;
+    display: flex;
+    flex-direction: row;
+}
+
+#ficha span {
+    font-weight: bold;
+}
+
+#ficha img {
+    width: 100px;
+    height: 100px;
+    border-radius: 20px;
+}
+
+/* Pagina Peliculas */
+#CatalogoSeries,
+#CatalogoPelis {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 50px;
+} 
+
+#CatalogoSeries article,
+#CatalogoPelis article {
+    border: 1px solid red;
+    border-radius: 10px;
+    width: 45%;
+}
+
+#CatalogoSeries div,
+#CatalogoPelis div {
+    text-align: justify;
+    width: 45%;
+}
+
+#CatalogoPelis img,
+#CatalogoSeries img{
+    height: 300px;
+    width: 200px;
+    border-radius: 20px;
+}
 
 /*Footer*/
 footer {
     background-color: #ff0000;
     padding: 20px;
     width: 100vw;
-    position: relative;
+    position: sticky;
     text-align: center;
     margin-top: 125px;
+    display: block;
 }
 
 footer img {
