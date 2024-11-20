@@ -157,7 +157,7 @@ a:hover {
     background-color: #DC1A28;
     border-radius: 50px;
     width: 25%;
-    height: 925px;
+    height: 950px;
     margin-left: 7%;
     margin-top: 5%;
     float: inline-start;
@@ -322,10 +322,16 @@ button[type="submit"]:active {
 }
 
 /* Pagina detalles */
+#si {
+    display: flex;
+    border-radius: 10px;
+    padding-top: auto;
+}
+
 #trailer {
     margin-left: 5%;
     margin-top: 50px;
-    float: inline-start;  
+    display: flex;
 }
 
 #trailer h1{
@@ -337,37 +343,64 @@ button[type="submit"]:active {
     height: 450px;
 }
 
-#sinopsis {
-    margin-left: 5%;
-    margin-top: 25px;
-    width: 850px;
-    text-align: justify;
-    float: inline-start;
-    font-size: 17px;
-}
-
 #ficha {
     display: flex;
     flex-wrap: wrap;
     margin-top: 50px;
     justify-content: center;
-    align-items: center;
-    width: 450px;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+}
+
+#sinopsis h2,
+#ficha h2 {
+    margin-left: 30px;
+}
+
+#ficha p {
+    margin-left: 30px;
+    font-size: 15px;
+    margin-bottom: 0;
 }
 
 #ficha span {
     font-weight: bold;
 }
 
-#ficha img {
+#reparto h3{
+    margin-left: 30px;
+}
+
+#reparto img {
     width: 100px;
     height: 100px;
     border-radius: 20px;
+    margin-left: 30px;
+}
+
+#sinopsis p {
+    margin-left: 30px;
+    text-align: justify;
+    width: 90%;
 }
 
 /* Pagina Peliculas */
+#CatalogoSeries article,
+#CatalogoPelis article {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 20px;    
+    border: 1px solid red;
+    border-radius: 10px;
+    width: 40%;
+    padding: 10px;
+}
+
+#CatalogoSeries article:hover,
+#CatalogoPelis article:hover {
+    transform: scale(1.04);
+}
+
 #CatalogoSeries,
 #CatalogoPelis {
     display: flex;
@@ -376,13 +409,6 @@ button[type="submit"]:active {
     justify-content: center;
     gap: 50px;
 } 
-
-#CatalogoSeries article,
-#CatalogoPelis article {
-    border: 1px solid red;
-    border-radius: 10px;
-    width: 45%;
-}
 
 #CatalogoSeries div,
 #CatalogoPelis div {
@@ -395,14 +421,46 @@ button[type="submit"]:active {
     height: 300px;
     width: 200px;
     border-radius: 20px;
+    max-width: 200px;
+    margin-right: 20px;
 }
 
+.poster-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-grow: 1;
+}
+
+.poster-info p {
+    color: #ccc;
+    font-size: 15px;
+    line-height: 1.5;
+    margin: 0;
+    width: 100%;
+}
+
+.detalles {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+    padding: 0;
+    list-style: none;
+}
+
+.detalles li {
+    margin-top: 5px;
+    background-color: #444;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 15px;
+}
 /*Footer*/
 footer {
     background-color: #ff0000;
     padding: 20px;
     width: 100vw;
-    position: sticky;
     text-align: center;
     margin-top: 125px;
     display: block;
